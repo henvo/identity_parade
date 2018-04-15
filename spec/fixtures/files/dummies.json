@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Henning Vogt",
+    "address": {
+      "street": "Foobar St.",
+      "housenumber": 24,
+      "zipcode": "10117",
+      "city": "Berlin",
+      "country": "DE"
+    },
+    "affiliation": "admin",
+    "tags": ["foo", "bar", "baz"]
+  },
+  {
+    "id": 4,
+    "name": "Homer Simpson",
+    "address": {
+      "street": "Evergreen Terrace",
+      "housenumber": "102A",
+      "zipcode": "43745",
+      "city": "Springfield",
+      "country": "US"
+    },
+    "affiliation": "agent",
+    "tags": ["foo", "bar", "buzz"]
+  },
+  {
+    "id": 10202,
+    "name": "Some Random Guy",
+    "address": {
+      "street": "Foobar St.",
+      "housenumber": "35",
+      "zipcode": "10117",
+      "city": "Berlin",
+      "country": "DE"
+    },
+    "affiliation": "developer",
+    "tags": ["foo", "bar", "buzz"]
+  }
+]

@@ -1,0 +1,16 @@
+[{
+  "_id":"5ad2d622196243001b704950",
+  "city":"Berlin",
+  "country": "DE",
+  "housenumber":"1",
+  "postalcode":"10115",
+  "street":"Cordeliastr."
+},
+{
+  "_id":"4ad2d622192244441b712340",
+  "city":"Berlin",
+  "country": "DE",
+  "housenumber":"10",
+  "postalcode":"12167",
+  "street":"Kreuzberger Str."
+}]

@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'activesupport', '~> 5.1'
   spec.add_dependency 'fuzzy-string-match', '~> 1.0', '>= 1.0.1'
   spec.add_dependency 'recursive-open-struct', '~> 1.1'
 

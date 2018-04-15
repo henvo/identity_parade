@@ -1,12 +1,15 @@
 require 'recursive-open-struct'
+require 'active_support/all'
 
 require 'identity_parade/version'
 require 'identity_parade/match'
 require 'identity_parade/matcher'
-require 'identity_parade/matchers/hash'
-require 'identity_parade/matchers/string'
-require 'identity_parade/matchers/array'
-require 'identity_parade/matchers/numeric'
+require 'identity_parade/matchers/hash_matcher'
+require 'identity_parade/matchers/string_matcher'
+require 'identity_parade/matchers/array_matcher'
+require 'identity_parade/matchers/numeric_matcher'
+require 'identity_parade/matchers/integer_matcher'
+require 'identity_parade/matchers/float_matcher'
 
 # This gem allows to compare two types.
 module IdentityParade
@@ -28,7 +31,7 @@ module IdentityParade
   end
 
   def match?(left, right)
-    match(left, right).score > self.class.config.match_score
+    match(left, right) >= IdentityParade.config.match_score
   end
 end
 

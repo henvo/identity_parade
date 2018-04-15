@@ -9,10 +9,17 @@ module IdentityParade
     end
 
     def score
-      return Matchers::Hash.new(@left, @right).score if @left.is_a? Hash
-      return Matchers::Array.new(@left, @right).score if @left.is_a? Array
-      return Matchers::Numeric.new(@left, @right).score if @left.is_a? Numeric
-      return Matchers::String.new(@left, @right).score if @left.is_a? String
+      return unless Kernel.const_defined?(matcher_class_name)
+
+      matcher.new(@left, @right).score
+    end
+
+    def matcher
+      matcher_class_name.constantize
+    end
+
+    def matcher_class_name
+      "identity_parade/matchers/#{@left.class}_matcher".classify
     end
   end
 end
