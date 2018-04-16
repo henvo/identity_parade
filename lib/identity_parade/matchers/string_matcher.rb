@@ -5,7 +5,7 @@ module IdentityParade
     # This matcher checks the similarity of two strings.
     class StringMatcher < Matcher
       def score
-        jarow.getDistance(left, right)
+        jarow.getDistance(left.to_s, right.to_s)
       end
 
       def jarow
