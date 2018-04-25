@@ -10,6 +10,10 @@ require 'identity_parade/matchers/array_matcher'
 require 'identity_parade/matchers/numeric_matcher'
 require 'identity_parade/matchers/integer_matcher'
 require 'identity_parade/matchers/float_matcher'
+require 'identity_parade/matchers/boolean_matcher'
+require 'identity_parade/matchers/true_class_matcher'
+require 'identity_parade/matchers/false_class_matcher'
+
 
 # This gem allows to compare two types.
 module IdentityParade

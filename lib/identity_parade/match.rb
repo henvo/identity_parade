@@ -19,7 +19,7 @@ module IdentityParade
     end
 
     def matcher_class_name
-      "identity_parade/matchers/#{@left.class}_matcher".classify
+      "identity_parade/matchers/#{@left.class.name.underscore}_matcher".classify
     end
   end
 end
