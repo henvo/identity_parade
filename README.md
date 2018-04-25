@@ -1,6 +1,6 @@
 # IdentityParade
 
-[IdentityParade](doc/assets/project.jpg)
+![IdentityParade](doc/assets/project.jpg)
 
 ## Installation
 
