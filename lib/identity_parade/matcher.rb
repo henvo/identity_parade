@@ -1,5 +1,8 @@
 module IdentityParade
-  # The base class for all matchers
+  # The base class for all matchers implements the basic interface for all
+  # matchers.
+  #
+  # Every matcher MUST implement a score method that returns a Number.
   class Matcher
     attr_reader :left, :right
 

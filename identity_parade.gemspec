@@ -9,8 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Henning Vogt']
   spec.email         = ['git@henvo.de']
 
-  spec.summary       = 'Find duplicates or near-duplicates of.'
-  spec.description   = 'This gem allows to compare two hashes.'
+  spec.summary       = 'Checks basic data types for similarity.'
+  spec.description   = 'IdentityParade allows you to compare two basic data ' \
+                       'types, e.g. hashes, arrays, numbers and strings.' \
+                       'It returns a matching score or a boolean.'
   spec.homepage      = 'https://github.com/henvo/identity_parade'
   spec.license       = 'MIT'
 
@@ -37,4 +39,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'reek', '~> 4.8'
   spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'simplecov', '~> 0.16'
 end

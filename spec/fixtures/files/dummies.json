@@ -10,7 +10,8 @@
       "country": "DE"
     },
     "affiliation": "admin",
-    "tags": ["foo", "bar", "baz"]
+    "tags": ["foo", "bar", "baz"],
+    "is_admin": true
   },
   {
     "id": 4,
@@ -23,7 +24,8 @@
       "country": "US"
     },
     "affiliation": "agent",
-    "tags": ["foo", "bar", "buzz"]
+    "tags": ["foo", "bar", "buzz"],
+    "is_admin": false
   },
   {
     "id": 10202,
@@ -36,6 +38,7 @@
       "country": "DE"
     },
     "affiliation": "developer",
-    "tags": ["foo", "bar", "buzz"]
+    "tags": ["foo", "bar", "buzz"],
+    "is_admin": true
   }
 ]
