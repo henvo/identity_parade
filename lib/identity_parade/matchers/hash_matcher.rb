@@ -6,7 +6,11 @@ module IdentityParade
     # iterates over all elements and creates a new matcher for every type.
     class HashMatcher < Matcher
       def score
-        sub_scores.sum / sub_scores.size.to_f
+        subs = sub_scores
+
+        return nil if subs.empty?
+
+        subs.sum / sub_scores.size.to_f
       end
 
       # @return [Float] The sum of all sub scores
