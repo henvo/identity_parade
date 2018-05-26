@@ -34,6 +34,52 @@ IdentityParade.match?(arg1, arg2)
 # => true
 ```
 
+### Examples
+Here are some examples how to use IdentityParade and what to expect.
+
+#### Numerics
+``` ruby
+IdentityParade.match(1, 1)
+=> 1
+IdentityParade.match(1, 0)
+=> 0.0
+```
+
+#### Strings
+Strings are compared by the Jarow-Winkler-Algorithm provided by the
+gem [fuzzy-string-match](https://github.com/kiyoka/fuzzy-string-match).
+
+``` ruby
+IdentityParade.match("hello", "hello")
+=> 1.0
+IdentityParade.match("hello", "hallo")
+=> 0.88
+IdentityParade.match("a", "z")
+=> 0.0
+```
+
+### Arrays
+``` ruby
+IdentityParade.match([1, 2, 'foo', { a: 'b'}], [1, 2, 'foo', { a: 'b' }])
+=> 1.0
+IdentityParade.match([1, 2, 'foo', { a: 'b'}], [1, 3, 'foo', { a: 'b' }])
+=> 0.75
+IdentityParade.match([1, 2, 'foo', { foo: 'bar'}], [])
+=> 0.0
+```
+
+### Hashes
+``` ruby
+IdentityParade.match({ a: 'b', c: 'd'}, { a: 'b', c: 'd'})
+=> 1.0
+IdentityParade.match({ a: 'b', c: 'd'}, { a: 'b', c: 'e'})
+=> 0.5
+IdentityParade.match({ a: 'b', c: 'd'}, { a: 'x', c: 'y'})
+=> 0.0
+```
+
+
+
 ## Configuration
 
 IdentityParade can be configured by the `configure` method:
