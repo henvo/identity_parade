@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Henning Vogt']
   spec.email         = ['git@henvo.de']
 
-  spec.summary       = 'Checks basic data types for similarity.'
+  spec.summary       = 'Compares two given hashes and returns a matching score.'
   spec.description   = 'IdentityParade allows you to compare two basic data ' \
                        'types, e.g. hashes, arrays, numbers and strings.' \
                        'It returns a matching score or a boolean.'

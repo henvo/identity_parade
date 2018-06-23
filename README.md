@@ -93,6 +93,41 @@ IdentityParade.configure do |config|
 end
 ```
 
+## Writing your own matcher
+
+IdentityParade always looks at the first given data type and tries to
+find the corresponding IdentityParade matcher.
+
+If you have a class with the name `Foobar` and want to write your custom
+matcher that will work with IdentityParade you have to name it to:
+`IdentityParade::Matchers::FoobarMatcher`.
+
+This matcher must inherit from `IdentityParade::Matcher` and implement the
+`score` method which returns a float between `0` and `1`.
+
+### Example
+
+``` ruby
+module IdentityParade
+  module Matchers
+    class FoobarMatcher < Matcher
+      def score
+        # You can access the first given object as +left+ and the
+        # other as +right+:
+
+        # When #some_value is the same we have a match
+        return 1 if left.some_value == right.some_value
+
+        # Do some more complicated stuff here.
+
+        # If there is no similarity at all return 0
+        0
+      end
+    end
+  end
+end
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run
